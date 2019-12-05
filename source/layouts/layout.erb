@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Elliot Erwin" %></title>
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+    <link rel="stylesheet" href="https://use.typekit.net/zkv5kvu.css">
+  </head>
+
+  <body class="<%= page_classes %> has-navbar-fixed-top">
+
+    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="container">
+
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="/images/logo.png" />
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item navbar-about" href="/about.html">Hello</a>
+          </div>
+          <div class="navbar-end">
+            <a class="navbar-item navbar-posters" href="/posters.html">Posters</a>
+            <a class="navbar-item navbar-projects" href="/projects.html">Projects</a>
+            <a class="navbar-item navbar-branding" href="/branding.html">Branding</a>
+            <a class="navbar-item navbar-extras" href="/extras.html">Extras</a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+    <%= yield %>
+
+    <%# only show bottom links in development mode %>
+    <% if development? %>
+      <nav class="navbar is-fixed-bottom is-transparent" id="navbar-dev">
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="/images/mockup.pdf" target="_blank">Mockup</a>
+            <a class="navbar-item" href="/images/sitemap.pdf" target="_blank">Sitemap</a>
+            <a class="navbar-item" href="/styleguide.html">Styleguide</a>
+          </div>
+        </div>
+      </nav>
+    <% end %>
+
+  </body>
+</html>
+
