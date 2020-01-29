@@ -1,12 +1,9 @@
 // https://bulma.io/documentation/customize/variables/
-
 $body-background-color: #292929;
 $dark: #292929;
 $light: #d8d8d8;
-
 // spacing between grid
 $column-gap: 8px;
-
 // container width
 // $gap: 32px !default
 // // 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
@@ -17,25 +14,36 @@ $column-gap: 8px;
 // $widescreen: 1152px + (2 * $gap) !default
 // // 1344px container + 4rem
 // $fullhd: 1500px + (2 * $gap) !default
-
 // assign secondary font family with css class "is-family-secondary"
-$family-sans-serif: "proxima-nova", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$family-secondary: "mrs-eaves", "Georgia", serif;
-
+$family-sans-serif: "proxima-nova",
+BlinkMacSystemFont,
+-apple-system,
+"Segoe UI",
+"Roboto",
+"Oxygen",
+"Ubuntu",
+"Cantarell",
+"Fira Sans",
+"Droid Sans",
+"Helvetica Neue",
+"Helvetica",
+"Arial",
+sans-serif;
+$family-secondary: "mrs-eaves",
+"Georgia",
+serif;
 // change font colors to white
 $text: #fff;
 $text-light: #ddd;
 $text-strong: #fff;
-
 // font sizing
-$size-1: 5rem;
+$size-1: 7rem;
 $size-2: 4rem;
 $size-3: 3rem;
 $size-4: 2rem;
 $size-5: 1.5rem;
 $size-6: 1rem;
 $size-7: 0.9rem;
-
 // font weights
 $weight-light: 300;
 $weight-normal: 400;
@@ -44,7 +52,6 @@ $weight-semibold: 600;
 $weight-bold: 700;
 $weight-extrabold: 800;
 $weight-black: 900;
-
 // section spacing
 $section-padding: 3rem 1.5rem;
 $section-padding-medium: 6rem 1.5rem;
