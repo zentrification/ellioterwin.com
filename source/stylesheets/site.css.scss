@@ -79,7 +79,8 @@ body.posters .navbar-posters {
 
 body.posters .image-wrapper,
 body.projects .image-wrapper,
-body.fallout .image-wrapper {
+body.fallout .image-wrapper,
+body.fallout2 .image-wrapper {
     height: $grid-image-height;
 }
 
@@ -114,6 +115,8 @@ body.fallout .image-wrapper {
     padding: 0;
 }
 
+// use bulma helpers
+// https://bulma.io/documentation/modifiers/typography-helpers/#text-weight
 .projecttitle {
     font-weight: 900;
 }
@@ -122,6 +125,8 @@ body.fallout .image-wrapper {
     font-weight: 900;
 }
 
+// use bulma helpers
+// https://bulma.io/documentation/modifiers/typography-helpers/#font-family
 .collabnames {
     font-family: mrs-eaves;
     font-weight: 900;
