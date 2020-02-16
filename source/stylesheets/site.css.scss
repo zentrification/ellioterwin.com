@@ -2,8 +2,11 @@
 // then import bulma itself
 @import 'bulma_customizations';
 @import 'bulma-0.8.0/bulma.sass';
-// height of projects, posters and extras
-$grid-image-height: 42rem;
+
+//////////////////////////////////////////////////////////////////////////
+// navigation
+//////////////////////////////////////////////////////////////////////////
+
 // transparent development bar at bottom of page
 #navbar-dev {
     background-color: transparent;
@@ -26,7 +29,9 @@ body.posters .navbar-posters {
     text-decoration: underline;
 }
 
-// youtube embeds
+//////////////////////////////////////////////////////////////////////////
+// iframe embeds
+//////////////////////////////////////////////////////////////////////////
 .iframe-container {
     overflow: hidden;
     padding-top: 56.25%;
@@ -41,15 +46,10 @@ body.posters .navbar-posters {
     }
 }
 
-// projects & posters
-.image-wrapper {
-    background-size: cover;
-    background-position: center center;
-    display: block;
-    position: relative;
-}
-
-.image-wrapper::before {
+//////////////////////////////////////////////////////////////////////////
+// images
+//////////////////////////////////////////////////////////////////////////
+.image.has-hover-background::before {
     content: "";
     position: absolute;
     top: 0;
@@ -57,49 +57,46 @@ body.posters .navbar-posters {
     width: 100%;
     height: 100%;
     transition: background 0.2s;
+    z-index: 11;
 }
 
-.image-wrapper:hover {
-    .image-hover {
-        display: block;
+.image .hover-image,
+.image .hover-text {
+    opacity: 0;
+    transition: opacity 0.5s;
+    visibility: hidden;
+}
+
+.image .hover-text {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    width: 80%;
+    transform: translateY(-50%);
+    z-index: 12;
+}
+
+.image .hover-image {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: 10;
+}
+
+.image:hover {
+    .hover-image,
+    .hover-text {
+      opacity: 1;
+      visibility: visible;
     }
     &::before {
         background: rgba(0, 0, 0, 0.85);
     }
 }
 
-.image-hover {
-    display: none;
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    width: 80%;
-    transform: translateY(-50%);
-}
-
-body.posters .image-wrapper,
-body.projects .image-wrapper,
-body.fallout .image-wrapper,
-body.cmyk .image-wrapper,
-body.coke .image-wrapper,
-body.nba .image-wrapper,
-body.superbowl .image-wrapper,
-body.inter .image-wrapper,
-body.indycar .image-wrapper,
-body.merrell .image-wrapper,
-body.liberty .image-wrapper,
-body.panasonic .image-wrapper,
-body.extras .image-wrapper,
-body.concacaf .image-wrapper {
-    height: $grid-image-height;
-}
-
-.extra-placeholder {
-    background-color: $light;
-    height: $grid-image-height;
-    width: 100%;
-}
-
+//////////////////////////////////////////////////////////////////////////
+// other
+//////////////////////////////////////////////////////////////////////////
 .title {
     font-weight: 900;
 }

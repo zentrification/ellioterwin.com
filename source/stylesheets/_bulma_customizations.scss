@@ -15,27 +15,31 @@ $column-gap: 8px;
 // // 1344px container + 4rem
 // $fullhd: 1500px + (2 * $gap) !default
 // assign secondary font family with css class "is-family-secondary"
+//
 $family-sans-serif: "proxima-nova",
-BlinkMacSystemFont,
--apple-system,
-"Segoe UI",
-"Roboto",
-"Oxygen",
-"Ubuntu",
-"Cantarell",
-"Fira Sans",
-"Droid Sans",
-"Helvetica Neue",
-"Helvetica",
-"Arial",
-sans-serif;
+  BlinkMacSystemFont,
+  -apple-system,
+  "Segoe UI",
+  "Roboto",
+  "Oxygen",
+  "Ubuntu",
+  "Cantarell",
+  "Fira Sans",
+  "Droid Sans",
+  "Helvetica Neue",
+  "Helvetica",
+  "Arial",
+  sans-serif;
+
 $family-secondary: "mrs-eaves",
-"Georgia",
-serif;
+  "Georgia",
+  serif;
+
 // change font colors to white
 $text: #fff;
 $text-light: #ddd;
 $text-strong: #fff;
+
 // font sizing
 $size-1: 7rem;
 $size-2: 4rem;
@@ -44,12 +48,14 @@ $size-4: 2rem;
 $size-5: 1.5rem;
 $size-6: 1rem;
 $size-7: 0.9rem;
+
 // font weights
 $weight-light: 300;
 $weight-normal: 400;
 $weight-medium: 500;
 $weight-semibold: 600;
 $weight-bold: 900;
+
 // section spacing
 $section-padding: 3rem 1.5rem;
 $section-padding-medium: 6rem 1.5rem;
