@@ -1,20 +1,17 @@
 section.section
   .container
-    .columns
-      .column
-      .column.is-one-third
-        .box.has-text-black
-          a href="https://bulma.io/documentation/customize/variables/" target="_blank" Bulma variables documentation
-          br
-          br
-          p.has-text-black Bulma components used
-          ul
-            li : a href="https://bulma.io/documentation/columns/" target="_blank" Columns
-            li : a href="https://bulma.io/documentation/layout/section/" target="_blank" Section
-            li : a href="https://bulma.io/documentation/elements/title/" target="_blank" Title
-            li : a href="https://bulma.io/documentation/components/navbar/" target="_blank" Navbar
-            li : a href="https://bulma.io/documentation/modifiers/color-helpers/" target="_blank" Color helpers
-            li : a href="https://bulma.io/documentation/modifiers/typography-helpers/" target="_blank" Typography helpers
+    p Bulma variables are configured in <code>_bulma_custimizations.scss</code>
+    a href="https://bulma.io/documentation/customize/variables/" target="_blank" All bulma variables documented here
+    br
+    br
+    p Bulma components used
+    ul
+      li : a href="https://bulma.io/documentation/columns/" target="_blank" Columns
+      li : a href="https://bulma.io/documentation/layout/section/" target="_blank" Section
+      li : a href="https://bulma.io/documentation/elements/title/" target="_blank" Title
+      li : a href="https://bulma.io/documentation/components/navbar/" target="_blank" Navbar
+      li : a href="https://bulma.io/documentation/modifiers/color-helpers/" target="_blank" Color helpers
+      li : a href="https://bulma.io/documentation/modifiers/typography-helpers/" target="_blank" Typography helpers
 
 section.section.has-background-grey
   .container
@@ -35,20 +32,30 @@ section.section.is-large.has-background-grey
     p.title Large section
     p add class <code>is-large</code>
 
-
 section.section
   .container
     p.title Images
     p config.rb contains a helper method <code>image</code> used to generate image HTML markup
     br
-    p  Bulma has built in helper classes to set image aspect ratio
-    p
-      code' is-1by1
-      code' is-4by3
-      code' is-3by2
-      code' is-16by9
-      | along with 12 others:
-    p : a href="https://bulma.io/documentation/elements/image/#responsive-images-with-ratios" target="_blank" https://bulma.io/documentation/elements/image/#responsive-images-with-ratios
+    p Left image
+    code.has-text-black
+      | <% image "/images/posters/akira.png" %>
+    br
+    br
+    p Middle image
+    code.has-text-black
+      | <% image "/images/posters/akira.png", hover: "/images/posters/Vibes.png" %>
+    br
+    br
+    p Right image
+    pre
+      code.has-text-black
+        | <% image "/images/posters/akira.png", hover: "/images/posters/Vibes.png" do %>
+        br
+        |   html here ...
+        br
+        | <% end %>
+
     br
     .columns
       .column.is-one-third
@@ -64,16 +71,15 @@ section.section
           p.title Title
           p.subtitle Subtitle
 
-    figure.highlight
-      pre
-        code.has-text-black
-          | Left<br>
-          | <% image "/images/posters/akira.png" %>
-          | <br><br>Middle<br>
-          | <% image "/images/posters/akira.png", hover: "/images/posters/Vibes.png" %>
-          | <br><br>Right<br>
-          | <% image "/images/posters/akira.png", hover: "/images/posters/Vibes.png" do %>
-          br
-          |   html here ...
-          br
-          | <% end %>
+    p  Bulma has built in helper classes to set image aspect ratio
+    p
+      code' is-1by1
+      code' is-4by3
+      code' is-3by2
+      code' is-16by9
+      | along with 12 others:
+    p : a href="https://bulma.io/documentation/elements/image/#responsive-images-with-ratios" target="_blank" https://bulma.io/documentation/elements/image/#responsive-images-with-ratios
+    br
+    p classes can be passed to the image helper as follows:
+    p : code <% image "/path/to/image.jpg", class: "is-16by9" %>
+    br

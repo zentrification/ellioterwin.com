@@ -21,12 +21,16 @@
 }
 
 // active navigation element
-body.about .navbar-about,
-body.branding .navbar-branding,
-body.extras .navbar-extras,
-body.projects .navbar-projects,
-body.posters .navbar-posters {
+@each $page in about, branding, extras, projects, posters {
+  body.#{$page} .navbar-#{$page} {
     text-decoration: underline;
+  }
+}
+
+@each $project in cmyk, coke, concacaf, fallout, indycar, inter, liberty, merrell, nba, superbowl {
+  body.#{$project} .navbar-projects {
+    text-decoration: underline;
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////

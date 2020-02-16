@@ -29,12 +29,6 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <!--
-            <a class="navbar-item navbar-about" href="/about.html">Hello</a>
-            -->
-            <% %w(about branding extras posters projects).each do |page| %>
-              <a class="navbar-item navbar-<%=page%>" href="/<%=page%>.html"><%=page.capitalize%></a>
-            <% end %>
           </div>
           <div class="navbar-end">
             <!--
@@ -43,9 +37,35 @@
             <a class="navbar-item navbar-branding" href="/branding.html">Branding</a>
             <a class="navbar-item navbar-extras is-size-4" href="/extras.html">+</a>
             -->
-            <% %w(cmyk coke concacaf fallout indycar inter liberty merrell nba superbowl).each do |page| %>
+            <% %w(about branding extras posters).each do |page| %>
               <a class="navbar-item navbar-<%=page%>" href="/<%=page%>.html"><%=page.capitalize%></a>
             <% end %>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link navbar-projects" href="/projects.html">
+                Projects
+              </a>
+              <div class="navbar-dropdown has-background-dark">
+                <% %w(cmyk coke concacaf fallout indycar inter liberty merrell nba superbowl).each do |page| %>
+                  <a class="navbar-item navbar-<%=page%>" href="/<%=page%>.html"><%=page.capitalize%></a>
+                <% end %>
+              </div>
+            </div>
+
+            <%# only show this menu in local development mode %>
+            <% if development? %>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Development
+                </a>
+                <div class="navbar-dropdown has-background-dark">
+                  <a class="navbar-item" href="/images/mockup.pdf" target="_blank">Mockup</a>
+                  <a class="navbar-item" href="/images/sitemap.pdf" target="_blank">Sitemap</a>
+                  <a class="navbar-item" href="/styleguide.html">Styleguide</a>
+                </div>
+              </div>
+            <% end %>
+
           </div>
         </div>
 
@@ -53,19 +73,6 @@
     </nav>
 
     <%= yield %>
-
-    <%# only show bottom links in development mode %>
-    <% if development? %>
-      <nav class="navbar is-fixed-bottom is-transparent" id="navbar-dev">
-        <div class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="/images/mockup.pdf" target="_blank">Mockup</a>
-            <a class="navbar-item" href="/images/sitemap.pdf" target="_blank">Sitemap</a>
-            <a class="navbar-item" href="/styleguide.html">Styleguide</a>
-          </div>
-        </div>
-      </nav>
-    <% end %>
 
   </body>
 </html>
