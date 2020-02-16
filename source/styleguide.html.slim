@@ -15,3 +15,65 @@ section.section
             li : a href="https://bulma.io/documentation/components/navbar/" target="_blank" Navbar
             li : a href="https://bulma.io/documentation/modifiers/color-helpers/" target="_blank" Color helpers
             li : a href="https://bulma.io/documentation/modifiers/typography-helpers/" target="_blank" Typography helpers
+
+section.section.has-background-grey
+  .container
+    p.title Section
+    p Adjust section spacing with these variables in _bulma_custimizations.scss
+    ul
+      li $section-padding
+      li $section-padding-medium
+      li $section-padding-large
+
+section.section.is-medium.has-background-grey-light
+  .container
+    p.title Medium section
+    p add class <code>is-medium</code>
+
+section.section.is-large.has-background-grey
+  .container
+    p.title Large section
+    p add class <code>is-large</code>
+
+
+section.section
+  .container
+    p.title Images
+    p config.rb contains a helper method <code>image</code> used to generate image HTML markup
+    br
+    p  Bulma has built in helper classes to set image aspect ratio
+    p
+      code' is-1by1
+      code' is-4by3
+      code' is-3by2
+      code' is-16by9
+      | along with 12 others:
+    p : a href="https://bulma.io/documentation/elements/image/#responsive-images-with-ratios" target="_blank" https://bulma.io/documentation/elements/image/#responsive-images-with-ratios
+    br
+    .columns
+      .column.is-one-third
+        = image "/images/posters/akira.png" do
+          p.title Title
+          p.subtitle Subtitle
+
+      .column.is-one-third
+        = image "/images/posters/akira.png", hover: "/images/posters/Vibes.png"
+
+      .column.is-one-third
+        = image "/images/posters/akira.png", hover: "/images/posters/Vibes.png" do
+          p.title Title
+          p.subtitle Subtitle
+
+    figure.highlight
+      pre
+        code.has-text-black
+          | Left<br>
+          | <% image "/images/posters/akira.png" %>
+          | <br><br>Middle<br>
+          | <% image "/images/posters/akira.png", hover: "/images/posters/Vibes.png" %>
+          | <br><br>Right<br>
+          | <% image "/images/posters/akira.png", hover: "/images/posters/Vibes.png" do %>
+          br
+          |   html here ...
+          br
+          | <% end %>
