@@ -35,7 +35,7 @@
 }
 
 // active navigation element
-@each $page in about, branding, extras, projects, posters {
+@each $page in about, branding, extras, index, projects, posters {
   body.#{$page} .navbar-#{$page} {
     text-decoration: underline;
   }

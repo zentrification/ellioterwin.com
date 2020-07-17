@@ -37,18 +37,22 @@
             <a class="navbar-item navbar-branding" href="/branding.html">Branding</a>
             <a class="navbar-item navbar-extras is-size-4" href="/extras.html">+</a>
             -->
-            
 
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link navbar-projects" href="/projects.html">
-                Projects
-              </a>
-              <div class="navbar-dropdown has-background-dark">
-                <% %w(cmyk coke concacaf fallout indycar inter liberty merrell nba superbowl).each do |page| %>
-                  <a class="navbar-item navbar-<%=page%>" href="/<%=page%>.html"><%=page.capitalize%></a>
-                <% end %>
+            <%# projects is a dropdown only in development %>
+            <% if development? %>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link navbar-index" href="/index.html">
+                  Projects
+                </a>
+                <div class="navbar-dropdown has-background-dark">
+                  <% %w(cmyk coke concacaf fallout indycar inter liberty merrell nba superbowl).each do |page| %>
+                    <a class="navbar-item navbar-<%=page%>" href="/<%=page%>.html"><%=page.capitalize%></a>
+                  <% end %>
+                </div>
               </div>
-            </div>
+            <% else %>
+              <a class="navbar-item navbar-index" href="/index.html">Projects</a>
+            <% end %>
 
             <% %w(posters about).each do |page| %>
               <a class="navbar-item navbar-<%=page%>" href="/<%=page%>.html"><%=page.capitalize%></a>
