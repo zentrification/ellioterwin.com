@@ -37,9 +37,7 @@
             <a class="navbar-item navbar-branding" href="/branding.html">Branding</a>
             <a class="navbar-item navbar-extras is-size-4" href="/extras.html">+</a>
             -->
-            <% %w(about branding extras posters).each do |page| %>
-              <a class="navbar-item navbar-<%=page%>" href="/<%=page%>.html"><%=page.capitalize%></a>
-            <% end %>
+            
 
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link navbar-projects" href="/projects.html">
@@ -51,6 +49,10 @@
                 <% end %>
               </div>
             </div>
+
+            <% %w(posters about).each do |page| %>
+              <a class="navbar-item navbar-<%=page%>" href="/<%=page%>.html"><%=page.capitalize%></a>
+            <% end %>
 
             <%# only show this menu in local development mode %>
             <% if development? %>
