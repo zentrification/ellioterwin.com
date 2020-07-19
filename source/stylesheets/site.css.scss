@@ -120,6 +120,17 @@
     }
 }
 
+// bulma has mixins to apply css depending on browser width, can use to change height
+// https://bulma.io/documentation/overview/responsiveness/
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
 //////////////////////////////////////////////////////////////////////////
 // other
 //////////////////////////////////////////////////////////////////////////
