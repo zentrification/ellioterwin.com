@@ -128,7 +128,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 500px;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -175,10 +175,13 @@
     font-family: mrs-eaves;
     font-weight: 900;
     line-height: 70%;
+    margin-bottom: .5em;
 }
 
 .projectdescription {
     line-height: 110%;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .quote {
