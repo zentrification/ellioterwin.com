@@ -55,6 +55,27 @@
   }
 }
 
+body.hello .back-to-top {
+  display: none;
+}
+.back-to-top {
+  color: #999;
+  display: block;
+  font-size: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  &:hover {
+    color: #eee;
+  }
+}
+
+.copyright {
+  color: #999;
+  font-size: 0.8rem;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
 //////////////////////////////////////////////////////////////////////////
 // iframe embeds
 //////////////////////////////////////////////////////////////////////////
