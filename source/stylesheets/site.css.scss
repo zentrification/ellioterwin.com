@@ -149,7 +149,7 @@ body.hello .back-to-top {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 500px;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -196,13 +196,29 @@ body.hello .back-to-top {
     font-family: mrs-eaves;
     font-weight: 900;
     line-height: 70%;
+    margin-bottom: .5em;
 }
 
 .projectdescription {
     line-height: 110%;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .quote {
     font-family: mrs-eaves;
     font-size: 2.5em;
+}
+
+.contactinfo p {
+    margin-bottom: .5em;
+}
+
+.contactinfo h2 {
+    margin-bottom: -.25em;
+}
+
+
+.biosubhead {
+    padding-top: 1.25em;
 }
