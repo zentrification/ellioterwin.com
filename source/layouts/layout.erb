@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/zkv5kvu.css">
   </head>
 
-  <body class="<%= page_classes %> has-navbar-fixed-top">
+  <body class="<%= page_classes %>">
 
-    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-dark is-fixed-top is-hidden-tablet" role="navigation" aria-label="main navigation">
       <div class="container">
 
         <div class="navbar-brand">
@@ -27,55 +27,40 @@
           </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbarBasicExample" class="navbar-menu has-background-dark">
           <div class="navbar-start">
+            <a class="navbar-item navbar-hello" href="/hello.html">Hello</a>
           </div>
+
           <div class="navbar-end">
-            <!--
+            <a class="navbar-item navbar-index" href="/index.html">Projects</a>
             <a class="navbar-item navbar-posters" href="/posters.html">Posters</a>
-            <a class="navbar-item navbar-projects" href="/projects.html">Advertising</a>
-            <a class="navbar-item navbar-branding" href="/branding.html">Branding</a>
-            <a class="navbar-item navbar-extras is-size-4" href="/extras.html">+</a>
-            -->
-
-            <%# projects is a dropdown only in development %>
-            <% if development? %>
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link navbar-index" href="/index.html">
-                  Projects
-                </a>
-                <div class="navbar-dropdown has-background-dark">
-                  <% %w(cmyk coke concacaf fallout indycar inter liberty merrell nba superbowl).each do |page| %>
-                    <a class="navbar-item navbar-<%=page%>" href="/<%=page%>.html"><%=page.capitalize%></a>
-                  <% end %>
-                </div>
-              </div>
-            <% else %>
-              <a class="navbar-item navbar-index" href="/index.html">Projects</a>
-            <% end %>
-
-            <% %w(posters hello).each do |page| %>
-              <a class="navbar-item navbar-<%=page%>" href="/<%=page%>.html"><%=page.capitalize%></a>
-            <% end %>
-
-            <%# only show this menu in local development mode %>
-            <% if development? %>
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                  Development
-                </a>
-                <div class="navbar-dropdown has-background-dark">
-                  <a class="navbar-item" href="/images/mockup.pdf" target="_blank">Mockup</a>
-                  <a class="navbar-item" href="http://ellioterwin.com.s3-website-us-east-1.amazonaws.com/">Public Facing Site</a>
-                  <a class="navbar-item" href="/images/sitemap.pdf" target="_blank">Sitemap</a>
-                  <a class="navbar-item" href="/styleguide.html">Styleguide</a>
-                </div>
-              </div>
-            <% end %>
-
           </div>
         </div>
 
+      </div>
+    </nav>
+
+    <nav class="navbar-desktop is-hidden-mobile">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div class="navbar-desktop-left">
+              <a class="navbar-hello" href="/hello.html">Hello</a>
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <img src="/images/logo.png" />
+          </div>
+
+          <div class="column">
+            <div class="navbar-desktop-right">
+              <a class="navbar-index" href="/index.html">Projects</a>
+              <a class="navbar-posters" href="/posters.html">Posters</a>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
 
@@ -90,6 +75,10 @@
     <div class="copyright">
       &copy; by Elliot Erwin
     </div>
+
+    <% if development? %>
+      <%= partial "layouts/development" %>
+    <% end %>
 
   </body>
 </html>

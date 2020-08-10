@@ -29,23 +29,15 @@
 // navigation
 //////////////////////////////////////////////////////////////////////////
 
-// transparent development bar at bottom of page
-#navbar-dev {
-    background-color: transparent;
-    a.navbar-item {
-        color: transparent;
-        font-weight: bold;
-    }
-    a.navbar-item:hover {
-        color: #000;
-        background-color: #fff !important;
-    }
-}
-
 // active navigation element
 @each $page in hello, index, projects, posters {
-  body.#{$page} .navbar-#{$page} {
+  body.#{$page} .navbar .navbar-#{$page} {
+    color: #fff;
     text-decoration: underline;
+  }
+  body.#{$page} .navbar-desktop .navbar-#{$page} {
+    color: #fff;
+    border-bottom: 4px solid #fff;
   }
 }
 
@@ -55,6 +47,32 @@
   }
 }
 
+.navbar-desktop {
+  padding-top: 1rem;
+}
+.navbar-desktop-left,
+.navbar-desktop-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navbar-desktop-right {
+  right: 0%;
+}
+.navbar-desktop a {
+  color: #939598;
+  padding-bottom: 1px;
+  &:hover {
+    color: #fff;
+  }
+}
+.navbar-desktop a + a {
+  margin-left: 1rem;
+}
+
+//////////////////////////////////////////////////////////////////////////
+// back to top
+//////////////////////////////////////////////////////////////////////////
 body.hello .back-to-top {
   display: none;
 }
