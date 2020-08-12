@@ -47,8 +47,18 @@
   }
 }
 
+@include from($tablet) {
+  body {
+    padding-top: 4.5rem;
+  }
+}
 .navbar-desktop {
-  padding-top: 1rem;
+  background-color: $body-background-color;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30;
 }
 .navbar-desktop-left,
 .navbar-desktop-right {
@@ -68,6 +78,9 @@
 }
 .navbar-desktop a + a {
   margin-left: 1rem;
+}
+.navbar-desktop img.shrink {
+  max-height: 2.5rem;
 }
 
 //////////////////////////////////////////////////////////////////////////
