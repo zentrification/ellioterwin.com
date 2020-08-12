@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
 window.onscroll = function() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById('desktop-logo').classList.add('shrink')
-    console.log('shrinking');
   } else {
-    console.log('maximizing');
     document.getElementById('desktop-logo').classList.remove('shrink')
   }
 }
