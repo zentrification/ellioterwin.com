@@ -47,6 +47,11 @@
   }
 }
 
+// align mobile navbar logo to layout margins
+.navbar-brand img {
+  padding-left: 4px;
+}
+
 @include from($tablet) {
   body {
     padding-top: 4.5rem;
@@ -172,6 +177,19 @@ body.hello .back-to-top {
     }
 }
 
+body.index .image:hover {
+  @include until($desktop) {
+    .hover-image,
+    .hover-text {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &::before {
+        background: none;
+    }
+  }
+}
+
 // bulma has mixins to apply css depending on browser width, can use to change height
 // https://bulma.io/documentation/overview/responsiveness/
 .parallax {
@@ -202,6 +220,16 @@ body.hello .back-to-top {
     margin-bottom: -2px;
 }
 
+.is-size-3-mobile {
+  line-height: 1.2;
+}
+
+@include until($desktop) {
+  .section {
+    padding: 3rem 1rem;
+  }
+}
+
 .sectionFull {
     width: 100%;
     padding: 0;
@@ -222,7 +250,6 @@ body.hello .back-to-top {
 .collabnames {
     font-family: mrs-eaves;
     font-weight: 900;
-    line-height: 70%;
     margin-bottom: .5em;
 }
 
