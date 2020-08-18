@@ -200,6 +200,12 @@ body.index .image:hover {
   background-size: cover;
   height: 500px;
 }
+// does not work on IOS, hide
+@include until($desktop) {
+  .parallax {
+    display: none;
+  }
+}
 
 //////////////////////////////////////////////////////////////////////////
 // other
