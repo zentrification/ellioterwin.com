@@ -20,8 +20,7 @@ GEM
     execjs (2.9.1)
     fast_blank (1.0.1)
     fastimage (2.3.0)
-    ffi (1.15.5)
-    ffi (1.15.5-x64-mingw32)
+    ffi (1.15.4.pre1)
     haml (6.3.0)
       temple (>= 0.8.2)
       thor
@@ -111,6 +110,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  ffi (~> 1.15)
   middleman (~> 4.4)
   slim
   tzinfo-data
