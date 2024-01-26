@@ -29,6 +29,8 @@ page '/*.txt', layout: false
 #   },
 # )
 
+ignore 'stylesheets/bulma-0.8.0/*'
+
 # Helpers
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
