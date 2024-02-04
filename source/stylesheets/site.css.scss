@@ -119,6 +119,7 @@ body.hello .back-to-top {
     overflow: hidden;
     padding-top: 56.25%;
     position: relative;
+    height: 100%;
     iframe {
         border: 0;
         height: 100%;
@@ -127,6 +128,21 @@ body.hello .back-to-top {
         top: 0;
         width: 100%;
     }
+}
+
+.iframe-container-alt {
+  overflow: hidden;
+  padding-top: 0%;
+  position: relative;
+  height: 100%;
+  iframe {
+      border: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -148,6 +164,11 @@ body.hello .back-to-top {
     opacity: 0;
     transition: opacity 0.5s;
     visibility: hidden;
+}
+
+body.logos .image .hover-image, 
+body.logos .image .hover-text { 
+  transition: opacity 1s; 
 }
 
 .image .hover-text {
