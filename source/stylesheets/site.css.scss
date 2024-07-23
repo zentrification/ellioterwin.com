@@ -84,6 +84,10 @@
 .navbar-desktop a + a {
   margin-left: 1rem;
 }
+.navbar-desktop img {
+  max-height: 5.5rem;
+}
+
 .navbar-desktop img.shrink {
   max-height: 2.5rem;
 }
@@ -308,4 +312,13 @@ body.index .image:hover {
 
 .biosubhead {
     padding-top: 1.25em;
+}
+
+.brands {
+    height: 4em;
+}
+
+.brands img {
+  max-height: 4.5rem;
+
 }
