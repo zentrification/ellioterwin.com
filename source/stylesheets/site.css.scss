@@ -30,7 +30,7 @@
 //////////////////////////////////////////////////////////////////////////
 
 // active navigation element
-@each $page in hello, index, projects, posters {
+@each $page in hello, index, projects, keyart, brandmarks {
   body.#{$page} .navbar .navbar-#{$page} {
     color: #fff;
     text-decoration: underline;
