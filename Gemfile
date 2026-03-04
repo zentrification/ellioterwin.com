@@ -6,8 +6,8 @@ gem 'middleman', '~> 4.4'
 
 # slim 5.x broken with middleman
 gem 'slim', '~> 4.0'
-gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]
-gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw, :x64_mingw]
+gem 'tzinfo-data', platforms: [:windows, :jruby]
+gem 'wdm', '~> 0.1', platforms: [:windows]
 
 gem "webrick", "~> 1.8"
 

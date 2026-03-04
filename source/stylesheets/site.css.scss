@@ -3,6 +3,8 @@
 @import 'bulma_customizations';
 @import 'bulma-0.8.0/bulma.sass';
 
+
+
 //////////////////////////////////////////////////////////////////////////
 // scroll bar
 //////////////////////////////////////////////////////////////////////////
@@ -17,7 +19,7 @@
     width: 12px;
 }
 *::-webkit-scrollbar-track {
-    background: #292929;
+    background: #000000;
 }
 *::-webkit-scrollbar-thumb {
     background-color: grey;
@@ -37,7 +39,7 @@
   }
   body.#{$page} .navbar-desktop .navbar-#{$page} {
     color: #fff;
-    border-bottom: 4px solid #fff;
+    border-bottom: 2px solid #fff;
   }
 }
 
@@ -75,14 +77,25 @@
   right: 0%;
 }
 .navbar-desktop a {
-  color: #939598;
+  color: #ffffff;
   padding-bottom: 1px;
   &:hover {
     color: #fff;
   }
 }
+
+/* larger title on left side */
+.navbar-desktop .navbar-title {
+  font-size: 1.8em;
+  font-weight: 200;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+  &:hover {
+    color: #fff;
+  }
+}
 .navbar-desktop a + a {
-  margin-left: 1rem;
+  margin-left: 2.7rem;
 }
 .navbar-desktop img {
   max-height: 5.5rem;
@@ -123,7 +136,41 @@ body.hello .back-to-top {
 //////////////////////////////////////////////////////////////////////////
 // iframe embeds
 //////////////////////////////////////////////////////////////////////////
-.iframe-container {
+.iframe-container {/* filepath: source/stylesheets/site.css.scss */
+/* larger title on left side – plain text now */
+.navbar-desktop .navbar-title {
+  font-size: 1.5rem;
+  font-weight: 300;         /* lighter than “normal” */
+  color: #fff;
+  cursor: default;
+  letter-spacing: -0.04em;
+}
+
+.navbar-desktop .navbar-title:hover {
+  color: #fff;
+}
+.navbar-desktop .navbar-title {
+  font-size: 1.5rem;
+  font-weight: 100;         /* lighter than “normal” */
+  color: #fff;
+  cursor: default;
+  letter-spacing: -0.04em;
+}
+
+.navbar-desktop .navbar-title:hover {
+  color: #fff;
+}
+.navbar-desktop .navbar-title {
+  font-size: 1.5rem;
+  font-weight: 300;         /* lighter than “normal” */
+  color: #fff;
+  cursor: default;
+  letter-spacing: -0.04em;
+}
+
+.navbar-desktop .navbar-title:hover {
+  color: #fff;
+}
     overflow: hidden;
     padding-top: 56.25%;
     position: relative;
@@ -293,6 +340,7 @@ body.index .image:hover {
     line-height: 110%;
     margin-top: 1em;
     margin-bottom: 1em;
+    width: 75%;
 }
 
 .quote {
