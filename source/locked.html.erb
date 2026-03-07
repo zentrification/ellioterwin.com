@@ -3,16 +3,47 @@
 <head>
   <title>Protected Case Study</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      color: #ffffff;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    body > .section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .title, .subtitle {
+      color: #ffffff;
+    }
+    .button {
+      background-color: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+    }
+    .button:hover {
+      background-color: #f0f0f0;
+      color: #000000;
+    }
+  </style>
 </head>
 <body>
   <section class="section">
-    <div class="container" style="max-width: 400px; margin-top: 100px;">
-      <h1 class="title">Password Protected</h1>
-      <p class="subtitle">Please enter the password to view this case study.</p>
+    <div class="container" style="max-width: 400px;">
+      <h1 class="title">Secret!</h1>
+      <p class="subtitle">Please enter Password to continue.</p>
 
       <div class="field">
         <div class="control">
-          <input class="input" type="password" id="passwordInput" placeholder="Enter Password">
+          <input class="input" type="password" id="passwordInput" placeholder="Enter Password" onkeypress="if(event.key==='Enter') checkPassword()">
         </div>
       </div>
 
@@ -31,10 +62,10 @@
       var password = document.getElementById("passwordInput").value;
       
       // CHANGE "MySecretPassword" to whatever password you want to use
-      if (password === "password") {
+      if (password === "Password") {
         
         // CHANGE "project-x7f9.html" to the obscure file name you created in Step 1
-        window.location.href = "source/pitchcraft.html.erb";
+        window.location.href = "pitchcraft.html";
         
       } else {
         document.getElementById("errorMessage").style.display = "block";
