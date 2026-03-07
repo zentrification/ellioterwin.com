@@ -57,14 +57,17 @@
     </div>
   </section>
 
-  <script>
+ <script>
     function checkPassword() {
       var password = document.getElementById("passwordInput").value;
       
-      // CHANGE "MySecretPassword" to whatever password you want to use
+      // CHANGE "MySecretPassword" to your actual password
       if (password === "Password") {
         
-        // CHANGE "project-x7f9.html" to the obscure file name you created in Step 1
+        // This creates the digital stamp (cookie) that lasts for 1 day
+        document.cookie = "portfolio_auth=" + password + "; path=/; max-age=86400";
+        
+        // CHANGE "project-x7f9.html" to the hidden file name
         window.location.href = "pitchcraft.html";
         
       } else {
