@@ -12,3 +12,7 @@ gem 'wdm', '~> 0.1', platforms: [:windows]
 gem "webrick", "~> 1.8"
 
 gem "ffi", "~> 1.15"
+
+gem 'ostruct'
+gem 'csv'
+gem 'rdoc'
